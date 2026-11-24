@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pabi Para — Es Cream Gabin homemade. Varian Chocolate dan Cookies & Cream, Rp 9.500 per pcs. Pesan langsung via WhatsApp." />
+  <title>Pabi Para — Es Cream Gabin</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #FFF9FB; color: #4A281A; }
+    .font-brand { font-family: 'Fredoka', sans-serif; }
+    .card-shadow { box-shadow: 0 10px 25px -5px rgba(235,76,136,.12), 0 8px 10px -6px rgba(92,46,22,.06); }
+    .btn-pink { background: linear-gradient(135deg, #F0528D, #DF3B78); transition: .2s; }
+    .btn-wa   { background: linear-gradient(135deg, #25D366, #1EBE57); transition: .2s; }
+    .btn-pink:hover, .btn-wa:hover { filter: brightness(1.05); transform: translateY(-1px); }
+    .product-img { transition: transform .4s ease; }
+    .product-card:hover .product-img { transform: scale(1.05); }
+    [id] { scroll-margin-top: 80px; }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-pink-100">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-full overflow-hidden border-2 border-pink-300 shadow-sm shrink-0">
+          <svg viewBox="0 0 200 200" class="w-full h-full" aria-hidden="true">
+            <circle cx="100" cy="100" r="98" fill="#EB4C88"/>
+            <text x="100" y="106" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="38" fill="#FFFFFF" stroke="#5C2E16" stroke-width="5" paint-order="stroke">PabiPara</text>
+            <text x="100" y="135" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="600" font-size="16" fill="#FFF3D6">Es Cream Gabin</text>
+          </svg>
+        </div>
+        <div>
+          <span class="font-brand text-xl font-bold text-[#EB4C88] block leading-none">Pabi Para</span>
+          <span class="text-xs font-semibold text-[#7A4428]">Es Cream Gabin</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#5C2E16]">
+        <a href="#katalog" class="hover:text-[#EB4C88] transition">Katalog</a>
+        <a href="#keranjang" class="hover:text-[#EB4C88] transition">Keranjang</a>
+        <a href="#kontak" class="hover:text-[#EB4C88] transition">Kontak</a>
+      </nav>
+
+      <a href="#keranjang" class="inline-flex items-center gap-2 bg-pink-50 hover:bg-pink-100 text-[#D93874] border border-pink-200 px-3.5 py-2 rounded-full text-sm font-bold transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+        <span class="hidden sm:inline">Keranjang</span>
+        <span id="nav-badge" class="bg-[#EB4C88] text-white text-xs font-extrabold px-2 py-0.5 rounded-full">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="bg-gradient-to-b from-[#FFE6F0] via-[#FFF4F8] to-[#FFF9FB] pt-8 pb-12 md:py-14 border-b border-pink-100">
+    <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+
+      <div class="flex justify-center">
+        <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-full shadow-xl border-4 border-white overflow-hidden">
+          <svg viewBox="0 0 400 400" class="w-full h-full">
+            <circle cx="200" cy="200" r="194" fill="#EB4C88" stroke="#F8A5C2" stroke-width="12"/>
+            <!-- Aksen garis putih -->
+            <line x1="88" y1="88" x2="104" y2="112" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+            <line x1="112" y1="76" x2="120" y2="104" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+            <line x1="312" y1="88" x2="296" y2="112" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+            <line x1="288" y1="76" x2="280" y2="104" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+
+            <!-- Gabin Kiri (Chocolate) -->
+            <g transform="translate(88, 72) rotate(-14)">
+              <rect x="6" y="42" width="106" height="58" rx="10" fill="#D98A3C" stroke="#8C4A19" stroke-width="3"/>
+              <rect x="10" y="24" width="98" height="44" rx="6" fill="#6E3B23"/>
+              <path d="M10 38 Q35 45 58 36 T108 38" fill="none" stroke="#4D2614" stroke-width="3"/>
+              <rect x="2" y="4" width="106" height="32" rx="10" fill="#F4B254" stroke="#8C4A19" stroke-width="3"/>
+              <circle cx="26" cy="18" r="2.2" fill="#B56824"/>
+              <circle cx="54" cy="18" r="2.2" fill="#B56824"/>
+              <circle cx="82" cy="18" r="2.2" fill="#B56824"/>
+            </g>
+
+            <!-- Gabin Kanan (Cookies & Cream) -->
+            <g transform="translate(212, 54) rotate(14)">
+              <rect x="6" y="42" width="106" height="58" rx="10" fill="#D98A3C" stroke="#8C4A19" stroke-width="3"/>
+              <rect x="10" y="24" width="98" height="44" rx="6" fill="#F8F3EC"/>
+              <circle cx="28" cy="38" r="4.5" fill="#3B2316"/>
+              <circle cx="52" cy="48" r="5" fill="#3B2316"/>
+              <circle cx="76" cy="36" r="4" fill="#3B2316"/>
+              <circle cx="90" cy="52" r="4.5" fill="#3B2316"/>
+              <circle cx="40" cy="56" r="3.5" fill="#3B2316"/>
+              <rect x="2" y="4" width="106" height="32" rx="10" fill="#F4B254" stroke="#8C4A19" stroke-width="3"/>
+              <circle cx="26" cy="18" r="2.2" fill="#B56824"/>
+              <circle cx="54" cy="18" r="2.2" fill="#B56824"/>
+              <circle cx="82" cy="18" r="2.2" fill="#B56824"/>
+            </g>
+
+            <!-- Teks Pabi Para -->
+            <text x="200" y="242" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="68" stroke="#FFFFFF" stroke-width="14" paint-order="stroke">
+              <tspan fill="#6B3418">Pabi </tspan><tspan fill="#EB4C88">Para</tspan>
+            </text>
+
+            <path d="M100 264 Q200 250 300 264" fill="none" stroke="#FDE6B8" stroke-width="7" stroke-linecap="round"/>
+
+            <!-- Subjudul -->
+            <line x1="78" y1="292" x2="105" y2="292" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+            <text x="200" y="299" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="600" font-size="26" fill="#FFFFFF">Es Cream Gabin</text>
+            <line x1="295" y1="292" x2="322" y2="292" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+
+            <!-- Pill varian -->
+            <rect x="115" y="314" width="84" height="26" rx="13" fill="#6B3418"/>
+            <text x="157" y="331" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="600" font-size="13" fill="#FFFFFF">Chocolate</text>
+
+            <circle cx="208" cy="327" r="11" fill="#FDE6B8"/>
+            <text x="208" y="332" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="14" fill="#6B3418">&amp;</text>
+
+            <rect x="223" y="310" width="84" height="32" rx="16" fill="#FDE6B8"/>
+            <text x="265" y="324" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="11" fill="#6B3418">Cookies and</text>
+            <text x="265" y="336" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="11" fill="#6B3418">Cream</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="text-center md:text-left space-y-4">
+        <span class="inline-block bg-pink-100 text-[#D93874] text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
+          UMKM Homemade Dessert
+        </span>
+        <h1 class="font-brand text-4xl sm:text-5xl font-bold text-[#5C2E16] leading-tight">
+          Renyahnya Gabin, Lembutnya <span class="text-[#EB4C88]">Es Krim!</span>
+        </h1>
+        <p class="text-[#6E4735] text-base sm:text-lg leading-relaxed">
+          Biskuit gabin renyah dengan isian es krim homemade yang tebal dan lumer di mulut. Harga ramah di kantong, cuma <strong class="text-[#EB4C88]">Rp 9.500</strong> per pcs!
+        </p>
+        <div class="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-3">
+          <a href="#katalog" class="btn-pink text-white font-bold px-6 py-3.5 rounded-full shadow-md inline-flex items-center gap-2">
+            Pilih Varian Rasa
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <a href="https://wa.me/6287881748547?text=Halo%20Pabi%20Para%2C%20saya%20mau%20tanya%20stok%20Es%20Cream%20Gabin-nya%20dong!" target="_blank" rel="noopener"
+             class="bg-white hover:bg-green-50 text-[#1D9E4B] border border-green-200 font-bold px-5 py-3.5 rounded-full shadow-sm transition">
+            Chat WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KATALOG ================= -->
+  <main class="max-w-5xl mx-auto px-4 py-12 flex-1 w-full">
+    <section id="katalog">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <h2 class="font-brand text-3xl font-bold text-[#5C2E16]">Katalog Es Cream Gabin</h2>
+        <p class="text-sm sm:text-base text-[#7A4428] mt-1">Pilih varian favoritmu, masukkan ke keranjang, lalu pesan langsung via WhatsApp.</p>
+      </div>
+
+      <div id="product-grid" class="grid md:grid-cols-2 gap-7"></div>
+    </section>
+
+    <!-- ================= KERANJANG ================= -->
+    <section id="keranjang" class="mt-14 bg-white rounded-3xl border border-pink-100 card-shadow p-6 sm:p-8">
+      <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-pink-100">
+        <div>
+          <h2 class="font-brand text-2xl sm:text-3xl font-bold text-[#5C2E16]">Keranjang Pembelian</h2>
+          <p class="text-sm text-[#7A4428]">Cek kembali pesananmu sebelum dikirim ke WhatsApp.</p>
+        </div>
+        <button onclick="clearCart()" class="text-xs font-semibold text-gray-400 hover:text-red-500 transition">Kosongkan Keranjang</button>
+      </div>
+
+      <div class="grid md:grid-cols-5 gap-8 mt-6">
+        <div class="md:col-span-3 space-y-4">
+          <div id="cart-items" class="space-y-3"></div>
+
+          <div class="bg-[#FFF5F9] rounded-2xl p-4 border border-pink-100 flex items-center justify-between">
+            <div>
+              <span class="text-xs font-semibold text-[#7A4428] block">Total Pembayaran</span>
+              <span id="cart-total-qty" class="text-xs text-gray-500">0 item dipilih</span>
+            </div>
+            <span id="cart-total-price" class="font-brand text-2xl font-bold text-[#EB4C88]">Rp 0</span>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 bg-[#FFFDFB] rounded-2xl p-5 border border-amber-100 space-y-4">
+          <h3 class="font-brand text-lg font-bold text-[#5C2E16]">Data Pemesan</h3>
+
+          <div>
+            <label for="buyer-name" class="block text-xs font-bold text-[#5C2E16] mb-1">Nama Pemesan *</label>
+            <input type="text" id="buyer-name" placeholder="Contoh: Kak Dinda" class="w-full px-3.5 py-2.5 rounded-xl border border-pink-200 text-sm focus:outline-none focus:border-[#EB4C88]" />
+          </div>
+
+          <div>
+            <label for="delivery-method" class="block text-xs font-bold text-[#5C2E16] mb-1">Metode Pengambilan</label>
+            <select id="delivery-method" class="w-full px-3.5 py-2.5 rounded-xl border border-pink-200 text-sm bg-white focus:outline-none focus:border-[#EB4C88]">
+              <option value="Ambil di Tempat (Pick Up)">Ambil di Tempat (Pick Up)</option>
+              <option value="Pesan Antar (Delivery)">Pesan Antar (Delivery)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="buyer-note" class="block text-xs font-bold text-[#5C2E16] mb-1">Alamat / Catatan Tambahan</label>
+            <textarea id="buyer-note" rows="2" placeholder="Tulis alamat pengiriman atau catatan pesanan..." class="w-full px-3.5 py-2.5 rounded-xl border border-pink-200 text-sm focus:outline-none focus:border-[#EB4C88]"></textarea>
+          </div>
+
+          <button onclick="checkoutWhatsApp()" class="w-full btn-wa text-white font-bold py-3.5 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 text-sm sm:text-base">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+            </svg>
+            Pesan via WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="kontak" class="bg-[#5C2E16] text-amber-50 mt-14">
+    <div class="max-w-5xl mx-auto px-4 py-10 grid sm:grid-cols-2 gap-8 items-center">
+      <div class="space-y-2">
+        <h3 class="font-brand text-2xl font-bold text-white">Pabi Para — Es Cream Gabin</h3>
+        <p class="text-sm text-amber-200/90 leading-relaxed">
+          Melayani pesanan satuan maupun untuk acara spesial. Simpan di freezer agar tekstur es krim dan kerenyahan gabin tetap terjaga.
+        </p>
+        <div class="pt-2 text-sm space-y-1 text-amber-100">
+          <p><strong>WhatsApp:</strong> 0878-8174-8547</p>
+          <p><strong>Jam Operasional:</strong> Setiap hari, 09.00 – 21.00 WIB</p>
+        </div>
+      </div>
+
+      <div class="sm:text-right space-y-3">
+        <p class="text-sm text-amber-200">Ada pertanyaan atau mau order dalam jumlah banyak?</p>
+        <a href="https://wa.me/6287881748547?text=Halo%20Admin%20Pabi%20Para%2C%20saya%20ingin%20memesan%20Es%20Cream%20Gabin." target="_blank" rel="noopener"
+           class="btn-wa inline-block text-white font-bold px-6 py-3 rounded-full shadow-lg text-sm">
+          Hubungi WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-4 text-center text-xs text-amber-200/70">
+      &copy; 2026 Pabi Para Es Cream Gabin. UMKM Kuliner Indonesia.
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-[#5C2E16] text-white text-sm font-semibold px-4 py-3 rounded-2xl shadow-xl"></div>
+
+  <script>
+    const WA_NUMBER = '6287881748547';
+
+    // Data produk — ubah di sini kalau ada varian/harga baru
+    const PRODUCTS = [
+      {
+        id: 'choco',
+        name: 'Es Cream Gabin Chocolate',
+        price: 9500,
+        image: 'coklat.jpg',
+        badge: 'Best Seller',
+        badgeClass: 'bg-[#5C2E16]',
+        desc: 'Biskuit gabin renyah dengan isian es krim cokelat pekat dan choco chips melimpah di setiap gigitan.'
+      },
+      {
+        id: 'cookies',
+        name: 'Es Cream Gabin Cookies & Cream',
+        price: 9500,
+        image: 'cream.jpg',
+        badge: 'Favorit',
+        badgeClass: 'bg-[#EB4C88]',
+        desc: 'Gabin keemasan yang mengapit es krim vanila susu creamy dengan remahan biskuit cokelat yang gurih.'
+      }
+    ];
+
+    const cart = Object.fromEntries(PRODUCTS.map(p => [p.id, 0]));
+    const $ = id => document.getElementById(id);
+    const rupiah = n => 'Rp ' + n.toLocaleString('id-ID');
+
+    function showToast(msg) {
+      const t = $('toast');
+      t.textContent = msg;
+      t.classList.remove('hidden');
+      clearTimeout(showToast.timer);
+      showToast.timer = setTimeout(() => t.classList.add('hidden'), 2600);
+    }
+
+    function updateQty(id, delta) {
+      cart[id] = Math.max(0, cart[id] + delta);
+      renderControls();
+      renderCart();
+      if (delta > 0) showToast(PRODUCTS.find(p => p.id === id).name + ' ditambahkan ke keranjang!');
+    }
+
+    function clearCart() {
+      PRODUCTS.forEach(p => cart[p.id] = 0);
+      renderControls();
+      renderCart();
+      showToast('Keranjang dikosongkan.');
+    }
+
+    function renderProducts() {
+      $('product-grid').innerHTML = PRODUCTS.map(p => `
+        <article class="product-card bg-white rounded-3xl border border-pink-100 overflow-hidden card-shadow flex flex-col">
+          <div class="relative h-64 bg-white flex items-center justify-center overflow-hidden p-4">
+            <img src="${p.image}" alt="${p.name}" loading="lazy" class="product-img max-w-full max-h-full object-contain" />
+            <span class="absolute top-3.5 left-3.5 ${p.badgeClass} text-white text-xs font-bold px-3 py-1 rounded-full shadow">${p.badge}</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between border-t border-pink-50">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="font-brand text-2xl font-bold text-[#5C2E16] leading-snug">${p.name}</h3>
+                <span class="bg-pink-50 text-[#EB4C88] font-extrabold text-base px-3 py-1 rounded-xl border border-pink-200 shrink-0">${rupiah(p.price)}</span>
+              </div>
+              <p class="text-sm text-[#7A4428] mt-2 leading-relaxed">${p.desc}</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-pink-50 flex items-center justify-between">
+              <span class="text-xs font-semibold text-gray-500">Harga per 1 pcs</span>
+              <div id="control-${p.id}"></div>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderControls() {
+      PRODUCTS.forEach(p => {
+        const qty = cart[p.id];
+        $('control-' + p.id).innerHTML = qty === 0
+          ? `<button onclick="updateQty('${p.id}', 1)" class="btn-pink text-white text-sm font-bold px-4 py-2 rounded-full shadow-sm">+ Tambah</button>`
+          : `<div class="inline-flex items-center gap-3 bg-pink-50 border border-pink-200 rounded-full px-2 py-1">
+               <button onclick="updateQty('${p.id}', -1)" class="w-7 h-7 rounded-full bg-white text-[#EB4C88] font-bold shadow-sm hover:bg-pink-100" aria-label="Kurangi">−</button>
+               <span class="font-bold text-sm text-[#5C2E16] min-w-[20px] text-center">${qty}</span>
+               <button onclick="updateQty('${p.id}', 1)" class="w-7 h-7 rounded-full bg-[#EB4C88] text-white font-bold shadow-sm hover:opacity-90" aria-label="Tambah">+</button>
+             </div>`;
+      });
+    }
+
+    function renderCart() {
+      let totalQty = 0, totalPrice = 0, html = '';
+
+      PRODUCTS.forEach(p => {
+        const qty = cart[p.id];
+        if (!qty) return;
+        const subtotal = qty * p.price;
+        totalQty += qty;
+        totalPrice += subtotal;
+        html += `
+          <div class="flex items-center justify-between gap-3 bg-white p-3 rounded-2xl border border-pink-100">
+            <div class="flex items-center gap-3 min-w-0">
+              <img src="${p.image}" alt="" class="w-14 h-14 rounded-xl object-contain bg-white border border-pink-50 shrink-0" />
+              <div class="min-w-0">
+                <h4 class="font-bold text-sm text-[#5C2E16] truncate">${p.name}</h4>
+                <p class="text-xs text-[#7A4428]">${qty} pcs × ${rupiah(p.price)}</p>
+                <p class="font-bold text-sm text-[#EB4C88]">${rupiah(subtotal)}</p>
+              </div>
+            </div>
+            <div class="inline-flex items-center gap-1.5 bg-pink-50 rounded-full px-2 py-0.5 shrink-0">
+              <button onclick="updateQty('${p.id}', -1)" class="w-6 h-6 rounded-full bg-white text-[#EB4C88] font-bold text-xs shadow-sm" aria-label="Kurangi">−</button>
+              <span class="text-xs font-bold px-1">${qty}</span>
+              <button onclick="updateQty('${p.id}', 1)" class="w-6 h-6 rounded-full bg-[#EB4C88] text-white font-bold text-xs shadow-sm" aria-label="Tambah">+</button>
+            </div>
+          </div>`;
+      });
+
+      $('cart-items').innerHTML = totalQty ? html : `
+        <div class="text-center py-8 px-4 rounded-2xl border border-dashed border-pink-200 bg-pink-50/40">
+          <p class="text-sm font-semibold text-[#7A4428]">Keranjang masih kosong</p>
+          <p class="text-xs text-gray-500 mt-1">Pilih varian Es Cream Gabin di katalog di atas.</p>
+        </div>`;
+
+      $('cart-total-qty').textContent = totalQty + ' item dipilih';
+      $('cart-total-price').textContent = rupiah(totalPrice);
+      $('nav-badge').textContent = totalQty;
+    }
+
+    function checkoutWhatsApp() {
+      const items = PRODUCTS.filter(p => cart[p.id] > 0);
+      if (!items.length) {
+        showToast('Pilih minimal 1 Es Cream Gabin dulu ya!');
+        $('katalog').scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      const name = $('buyer-name').value.trim();
+      if (!name) {
+        showToast('Mohon isi Nama Pemesan terlebih dahulu.');
+        $('buyer-name').focus();
+        return;
+      }
+
+      const note = $('buyer-note').value.trim();
+      let total = 0;
+      const lines = [
+        'Halo *Pabi Para - Es Cream Gabin*! 🍦',
+        'Saya ingin memesan dengan rincian berikut:',
+        '',
+        `*Nama:* ${name}`,
+        `*Metode:* ${$('delivery-method').value}`,
+        '',
+        '*Detail Pesanan:*'
+      ];
+
+      items.forEach(p => {
+        const sub = cart[p.id] * p.price;
+        total += sub;
+        lines.push(`• ${p.name} (${cart[p.id]}x) = ${rupiah(sub)}`);
+      });
+
+      lines.push('', `*Total Pembayaran: ${rupiah(total)}*`);
+      if (note) lines.push(`*Alamat / Catatan:* ${note}`);
+      lines.push('', 'Terima kasih! 🙏');
+
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
+    }
+
+    renderProducts();
+    renderControls();
+    renderCart();
+  </script>
+</body>
+</html>
